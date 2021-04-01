@@ -1,0 +1,253 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+.title{
+	width: 100%;
+	height: 40px;
+	background: #25D366;
+	align-items: center;
+	display: flex;
+}
+
+.mem-chat{
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+/* created using standard avatar format given in w3school*/
+.profile-owner img,.profile-users img,.profile-users-name img{
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.mem-box{
+	display: block;
+	border-right: 2px solid #c9c9c9;
+}
+.mem-box,.owner-details{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	height: 55px;
+	background: #e8e8e8;
+	align-items: center;
+	border-radius: 1px solid #c9c9c9;
+}
+.profile-owner{
+	padding: 7px 0 0 20px;
+}
+.menu span a{
+	text-decoration: none;
+	padding: 0 0 0 20px;
+	font-size: 20px;
+	color: #403939;
+	font-weight: 100;
+}
+.menu{
+	padding: 0 20px 0 0;
+}
+.search-box{
+	width: 100%;
+	height: 55px;
+	background: #efefef;
+	border-right: 1px solid #c9c9c9;
+}
+.search{
+	padding: 8px 0 0px 15px;
+}
+.search input{
+	width: 89%;
+	height: 40px;
+	border-radius: 20px 0 0 20px;
+	border :none;
+	outline: none;
+	padding: 0 0 0 10px;
+	font-size: 16px;
+	letter-spacing: 1.5px;
+}
+.search span{
+	position: relative;
+	left: -4px;
+	background: #efefef;
+	padding: 11px 10px;
+	cursor: pointer;
+	border-radius: 0 20px 20px 0;
+	left: -4px;
+}
+.members{
+	width: 100%;
+	background: #ffffff;
+	overflow: hidden;
+	border-top: 1px solid #c9c9c9;
+	border-right: #c9c9c9;
+	overflow-y: auto;
+	height: 713px;
+}
+.member{
+	height: 70px;
+	display: grid;
+	grid-template-columns: 80px 320px 60px;
+	align-items: center;
+	border-bottom: 1px solid #f2f1f1;
+	overflow: hidden;
+	cursor: pointer;
+}
+.member .profile-users{
+	padding: 0 0 0 10px;
+	overflow: hidden;
+}
+.member .name-msg h3,.name-lastseen h3{
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	overflow: hidden;
+}
+.member .name-msg p{
+	font-weight: 100;
+	color: #464646;
+	padding: 10px 0 0 0;
+	letter-spacing: 1px;
+	overflow: hidden;
+}
+.time{
+	align-items: center;
+	overflow: hidden;
+}
+.time p{
+	color: #6c6c6c;
+	font-size: 14px
+}
+.time span a{
+	text-decoration: none;
+	position: relative;
+	top: 10px;
+	font-size: 23px;
+	right: -7px;
+	color: #343434;
+}
+.time span{
+	display: none;
+}
+.member:hover .time span{
+	display: block;
+}
+.member:hover{
+	background: #f2f2f2;
+}
+.chat-box{
+	display: grid;
+	grid-template-rows: 60px 705px 55px;
+	width: 100%;
+}
+.chat-box .header{
+	width: 100%;
+	height: 60px;
+	background: #e8e8e8;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #c9c9c9;
+}
+.profile-users-name{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 10px;
+	justify-content: center;
+}
+.profile-users-name .header-image{
+	padding: 0 10px 0 0;
+}
+.name-lastseen p{
+	padding: 5px 0 0 0;
+	color: #454545;
+}
+.search-menu span a{
+	text-decoration: none;
+	color: black;
+	padding: 0 40px 0 0;
+	font-size: 20px;
+}
+.content{
+	background: black;
+	color: white;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column-reverse;
+	background-position: center;
+	background-size: cover;
+}
+.con{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+.receiver,.sender{
+	max-width: 70%;
+	text-align: justify;
+	text-justify: inter-word;
+	word-wrap: break-word;
+	margin-bottom: 8px;
+}
+.sender{
+	padding: 0 0 0 380px;
+}
+.receiver-msgs{
+	background: white;
+	color: black;
+	border-radius: 15px;
+	float: left;
+	padding: 10px 10px;
+	cursor: pointer;
+	border: none;
+	outline: none; 
+}
+.sender-msgs{
+	background: white;
+	color: black;
+	border-radius: 15px;
+	float: right;
+	padding: 10px 10px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+.msg-time p{
+	font-size: 17px;
+}
+.msg-time span p{
+	float: right;
+	font-size: 13px;
+	padding: 10px 0 0 0;
+	color: #797979;
+}
+.sender-msgs .msg-time span p{
+	color: black;
+}
+.footer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	background: #e8e8e8;
+}
+.footer span a{
+	text-decoration: none;
+	color: black;
+	font-size: 30px;
+	font-weight: 100;
+}
+.footer span input{
+	width: 750px;
+	height: 40px;
+	background: #ffffff;
+	border: none;
+	border-radius: 15px;
+	padding: 0 0 0 15px;
+	outline: none;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
