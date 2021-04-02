@@ -3,17 +3,9 @@
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 }
-.title{
-	width: 100%;
-	height: 40px;
-	background: #25D366;
-	align-items: center;
-	display: flex;
-}
-
 .mem-chat{
-	display: grid;
-	grid-template-columns: 30% 70%;
+	display: flex;/*we can choose grid too*/
+	grid-template-columns: 30% 70%;/* mot using auto auto auto as conversation box becomes small*/
 }
 /* created using standard avatar format given in w3school*/
 .profile-owner img,.profile-users img,.profile-users-name img{
@@ -22,38 +14,30 @@
 	border-radius: 50%;
 	cursor: pointer;
 }
-.mem-box{
-	display: block;
-	border-right: 2px solid #c9c9c9;
-}
 .mem-box,.owner-details{
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
-	width: 100%;
-	height: 55px;
+	width: auto;
+	height: auto;
 	background: #e8e8e8;
 	align-items: center;
-	border-radius: 1px solid #c9c9c9;
 }
 .profile-owner{
-	padding: 7px 0 0 20px;
+	padding: 7px 0 0 20px;/*adjustment of profile picture*/
 }
 .menu span a{
-	text-decoration: none;
-	padding: 0 0 0 20px;
-	font-size: 20px;
+	padding: 0 0 0 30px;
+	font-size: 23px;
 	color: #403939;
-	font-weight: 100;
+	font-weight: 75;
 }
 .menu{
-	padding: 0 20px 0 0;
+	padding: 0 30px 0 0;
 }
 .search-box{
-	width: 100%;
+	width: auto;
 	height: 55px;
 	background: #efefef;
-	border-right: 1px solid #c9c9c9;
 }
 .search{
 	padding: 8px 0 0px 15px;
@@ -61,35 +45,29 @@
 .search input{
 	width: 89%;
 	height: 40px;
-	border-radius: 20px 0 0 20px;
+	border-radius: 20px;
 	border :none;
-	outline: none;
 	padding: 0 0 0 10px;
 	font-size: 16px;
 	letter-spacing: 1.5px;
 }
 .search span{
 	position: relative;
-	left: -4px;
 	background: #efefef;
 	padding: 11px 10px;
 	cursor: pointer;
-	border-radius: 0 20px 20px 0;
-	left: -4px;
 }
 .members{
-	width: 100%;
+	width: auto;
 	background: #ffffff;
-	overflow: hidden;
-	border-top: 1px solid #c9c9c9;
-	border-right: #c9c9c9;
-	overflow-y: auto;
-	height: 713px;
+	overflow: hidden;/*to hide extra text outside of profile*/
+	overflow-y: auto;/*to add scroll*/
+	height: 713px; /*don't know why scroll not working when height is auto*/
 }
 .member{
-	height: 70px;
-	display: grid;
-	grid-template-columns: 80px 320px 60px;
+	height: auto;
+	display: grid;/*here flex won't work cause we can't manually adjust flex*/
+	grid-template-columns: 75px 320px 60px;
 	align-items: center;
 	border-bottom: 1px solid #f2f1f1;
 	overflow: hidden;
@@ -124,17 +102,17 @@
 	position: relative;
 	top: 10px;
 	font-size: 23px;
-	right: -7px;
+	right: -10px;
 	color: #343434;
 }
 .time span{
-	display: none;
+	display: none;/*to hide span a that is down bar*/
 }
 .member:hover .time span{
-	display: block;
+	display: block;/*to show that downward when someone hover over profile*/
 }
 .member:hover{
-	background: #f2f2f2;
+	background: #f2f2f2;/*change of background colour of profiles when hover*/
 }
 .chat-box{
 	display: grid;
@@ -142,7 +120,7 @@
 	width: 100%;
 }
 .chat-box .header{
-	width: 100%;
+	width: auto;
 	height: 60px;
 	background: #e8e8e8;
 	display: flex;
@@ -154,14 +132,14 @@
 .profile-users-name{
 	display: flex;
 	flex-wrap: wrap;
-	padding: 0 10px;
+	padding: 10px 10px;
 	justify-content: center;
 }
 .profile-users-name .header-image{
-	padding: 0 10px 0 0;
+	padding: auto;
 }
 .name-lastseen p{
-	padding: 5px 0 0 0;
+	padding: 1px 0 0 1px;
 	color: #454545;
 }
 .search-menu span a{
@@ -180,8 +158,8 @@
 	background-size: cover;
 }
 .con{
-	width: 90%;
-	margin: 0 auto;
+	width: auto;
+	margin: 0 auto;/*put 0 so that it start from end*/
 	display: flex;
 	flex-direction: column;
 }
@@ -190,7 +168,7 @@
 	text-align: justify;
 	text-justify: inter-word;
 	word-wrap: break-word;
-	margin-bottom: 8px;
+	margin-bottom: 8px;/*space between each chat*/
 }
 .sender{
 	padding: 0 0 0 380px;
@@ -199,7 +177,7 @@
 	background: white;
 	color: black;
 	border-radius: 15px;
-	float: left;
+	float: left;/*receiver message will be on left*/
 	padding: 10px 10px;
 	cursor: pointer;
 	border: none;
